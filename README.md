@@ -37,3 +37,6 @@ This is the config file for the SQLite included example:
 	]
 }
 </pre>
+
+The dist folder contains all you need to run the example, the jdbc driver for sqlite is included. If you need other drivers download from respective vendors or doenload my dist packages from https://github.com/msbragi/jdbmig-driverpack
+The java folder contains the source project 
