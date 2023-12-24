@@ -81,6 +81,10 @@ public class JDBMig {
         if (config == null) {
             return false;
         }
+        if (config.getConnection() == null) {
+            System.out.println("You must specify a connection in config file\n");
+            return false;
+        }
         // Check for driver file
         if (!JCheckConfig.checkDriver(config)) {
             return false;
@@ -96,9 +100,9 @@ public class JDBMig {
 
     private static void showHelp() {
         System.out.println("\nUsage: jdbcUtil --import|--export --config config_file_path [--dataDir YOUR_EXISTING_PATH]");
+        System.out.println("--config|-c file:\tconfiguration file see config/config.json as example");
         System.out.println("--import|-i:\t\timport data from json file");
         System.out.println("--export|-x:\t\texport data to json file");
-        System.out.println("--config|-c file:\tconfiguration file see config/config.json as example");
         System.out.println("--dataDir|-d path:\tthe directory where store json files or read from");
         System.out.println("\t\t\t(optional this option override the one defined in config.json)");
     }

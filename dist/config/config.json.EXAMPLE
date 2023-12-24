@@ -19,6 +19,7 @@
 		"initStrings": [
 				"ALTER SESSION SET NLS_DATE_FORMAT='YYYY-MM-DD HH24:MI:SS'",
 				"ALTER SESSION SET NLS_TIMESTAMP_FORMAT='YYYY-MM-DD HH24:MI:SS'"
+		],
 		"jdbcUrl": "jdbc:oracle:thin:@//localhost:1521/XEPDB1",
 		"user": "user",
 		"password": "password"
