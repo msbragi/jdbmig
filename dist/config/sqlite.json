@@ -6,7 +6,7 @@
 	"connection": {
 		"type": "sqlite",
 		"initString": null,
-		"jdbcUrl": "jdbc:sqlite:./sqlite/test.sqlite"
+				"jdbcUrl": "jdbc:sqlite:./example/test.sqlite"
 	},
 	"drivers": [
 		{"name": "sqlite", "className": "org.sqlite.JDBC", "jarFile": "lib/sqlite-jdbc-3.32.3.8.jar"}
