@@ -9,7 +9,6 @@ JDBMig is an agnostic java application that uses jdbc to export and import data 
 All the process is done by jdbc drivers. 
 <br>You can download the drivers i used from here https://github.com/msbragi/jdbmig-driverpack
 
-The configuration file 
 <pre>
 Usage: java -jar JDBMig-1.0.0 --import|--export --config config_file_path [--dataDir EXISTING_PATH]
 --config|-c file:       configuration file see config/config.json as example
@@ -21,4 +20,22 @@ Example: java -jar .\JDBMig-1.0.0.jar -x -c .\config\sqlite.json -d .\test
 
 View dist/config/config.json.EXAMPLE for help on configuration file
 
+This is the config file for the SQLite included example: 
+<pre>
+{
+	"dataDir":  "data/",
+	"fieldToLowerCase":  false,
+	"prettyPrint":  true,
+	"tables":  [ "customers", "employees", "invoices", "invoice_items", "artists", "albums", "media_types", "genres", "tracks", "playlist_track"  ],
+	"connection": {
+		"type": "sqlite",
+		"initString": null,
+		"jdbcUrl": "jdbc:sqlite:./sqlite/test.sqlite"
+	},
+	"drivers": [
+		{"name": "sqlite", "className": "org.sqlite.JDBC", "jarFile": "lib/sqlite-jdbc-3.32.3.8.jar"}
+    ]
+}
+</pre>
+  
 </pre>
