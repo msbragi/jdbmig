@@ -7,8 +7,6 @@ All the process is done by jdbc drivers.
 
 The configuration file 
 
-
-
 Usage: java -jar JDBMig-1.0.0 --import|--export --config config_file_path [--dataDir EXISTING_PATH]
 --config|-c file:       configuration file see config/config.json as example
 --import|-i:            import data from json file
