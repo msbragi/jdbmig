@@ -39,7 +39,8 @@ This is the config file for the SQLite included example:
 	]
 }
 
-For each table in tables array, jdbmig create a json file. example json for artists table (artists.json):
+For each table in tables array, jdbmig create a json file. 
+Example json file for exported artists table (artists.json):
 {
   "name" : "artists",
   "fields" : [ {
@@ -67,9 +68,11 @@ For each table in tables array, jdbmig create a json file. example json for arti
     "Name" : "Alanis Morissette"
   }]
 }
-
+Before import you can adjust something using the fields array.
+The <b>type</b> defines the sql.data.type (view Java.sql.type.txt for reference)
 The <b>renameTo</b> property permits you to change the name of destination field in database.
 The <b>dflt</b> property permits you to define a value to put if source value of data.field is null.
+If you change the value of <b>name</b> property the relative field in data section will not be imported.
 </pre>
 
 
