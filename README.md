@@ -17,7 +17,7 @@ Usage: java -jar JDBMig-1.0.0 --import|--export --config config_file_path [--dat
 --dataDir|-d path:      the directory where store json files or read from
                         (optional this option override the one defined in [config].json)
 Example: java -jar .\JDBMig-1.0.0.jar -x -c .\config\sqlite.json -d .\test
-
+</pre>
 View dist/config/config.json.EXAMPLE for help on configuration file
 
 This is the config file for the SQLite included example: 
@@ -34,8 +34,6 @@ This is the config file for the SQLite included example:
 	},
 	"drivers": [
 		{"name": "sqlite", "className": "org.sqlite.JDBC", "jarFile": "lib/sqlite-jdbc-3.32.3.8.jar"}
-    ]
+	]
 }
-</pre>
-  
 </pre>
