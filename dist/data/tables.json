@@ -1,0 +1,434 @@
+{
+  "name" : "tables",
+  "fields" : [ {
+    "name" : "ID",
+    "type" : 2
+  }, {
+    "name" : "CATEGORY_ID",
+    "type" : 2
+  }, {
+    "name" : "CODE",
+    "type" : 12
+  }, {
+    "name" : "DESCRIPTION",
+    "type" : 12
+  }, {
+    "name" : "SHORT",
+    "type" : 12
+  }, {
+    "name" : "PARENT_ID",
+    "type" : 2
+  }, {
+    "name" : "ORDERING",
+    "type" : 2
+  }, {
+    "name" : "CREATED",
+    "type" : 93
+  }, {
+    "name" : "UPDATED",
+    "type" : 93
+  }, {
+    "name" : "VALUE",
+    "type" : 2005
+  }, {
+    "name" : "VERSION",
+    "type" : 2
+  } ],
+  "data" : [ {
+    "ID" : 1,
+    "CATEGORY_ID" : 2,
+    "CODE" : "=",
+    "DESCRIPTION" : "Uguale",
+    "SHORT" : "=",
+    "PARENT_ID" : null,
+    "ORDERING" : 0,
+    "CREATED" : "$TSTP$:2019-04-15 09:47:59",
+    "UPDATED" : "$TSTP$:2019-04-15 09:50:49",
+    "VALUE" : null,
+    "VERSION" : 1
+  }, {
+    "ID" : 2,
+    "CATEGORY_ID" : 2,
+    "CODE" : ">=",
+    "DESCRIPTION" : "Maggiore uguale",
+    "SHORT" : ">=",
+    "PARENT_ID" : null,
+    "ORDERING" : 3,
+    "CREATED" : "$TSTP$:2019-04-15 09:48:33",
+    "UPDATED" : "$TSTP$:2019-04-15 09:50:49",
+    "VALUE" : null,
+    "VERSION" : 1
+  }, {
+    "ID" : 3,
+    "CATEGORY_ID" : 2,
+    "CODE" : "<=",
+    "DESCRIPTION" : "Minore uguale",
+    "SHORT" : "<=",
+    "PARENT_ID" : null,
+    "ORDERING" : 4,
+    "CREATED" : "$TSTP$:2019-04-15 09:48:57",
+    "UPDATED" : "$TSTP$:2019-04-15 09:50:49",
+    "VALUE" : null,
+    "VERSION" : 1
+  }, {
+    "ID" : 4,
+    "CATEGORY_ID" : 2,
+    "CODE" : "<>",
+    "DESCRIPTION" : "Diverso",
+    "SHORT" : "<>",
+    "PARENT_ID" : null,
+    "ORDERING" : 2,
+    "CREATED" : "$TSTP$:2019-04-15 09:49:40",
+    "UPDATED" : "$TSTP$:2019-04-15 09:50:49",
+    "VALUE" : null,
+    "VERSION" : 1
+  }, {
+    "ID" : 5,
+    "CATEGORY_ID" : 2,
+    "CODE" : "Is Not null",
+    "DESCRIPTION" : "Non nullo",
+    "SHORT" : "Is Not null",
+    "PARENT_ID" : null,
+    "ORDERING" : 1,
+    "CREATED" : "$TSTP$:2019-04-15 09:50:39",
+    "UPDATED" : "$TSTP$:2019-04-15 09:50:49",
+    "VALUE" : null,
+    "VERSION" : 1
+  }, {
+    "ID" : 6,
+    "CATEGORY_ID" : 3,
+    "CODE" : "T",
+    "DESCRIPTION" : "Casella di testo",
+    "SHORT" : "textbox",
+    "PARENT_ID" : null,
+    "ORDERING" : 0,
+    "CREATED" : "$TSTP$:2019-04-15 09:53:49",
+    "UPDATED" : "$TSTP$:2020-10-16 14:55:53",
+    "VALUE" : null,
+    "VERSION" : 1
+  }, {
+    "ID" : 7,
+    "CATEGORY_ID" : 4,
+    "CODE" : "D",
+    "DESCRIPTION" : "Data",
+    "SHORT" : "Date",
+    "PARENT_ID" : null,
+    "ORDERING" : 1,
+    "CREATED" : "$TSTP$:2019-04-15 10:26:03",
+    "UPDATED" : "$TSTP$:2019-04-15 10:26:03",
+    "VALUE" : null,
+    "VERSION" : 1
+  }, {
+    "ID" : 8,
+    "CATEGORY_ID" : 4,
+    "CODE" : "T",
+    "DESCRIPTION" : "Testo",
+    "SHORT" : "Text",
+    "PARENT_ID" : null,
+    "ORDERING" : 0,
+    "CREATED" : "$TSTP$:2019-04-15 10:26:22",
+    "UPDATED" : "$TSTP$:2019-04-15 10:26:33",
+    "VALUE" : null,
+    "VERSION" : 1
+  }, {
+    "ID" : 9,
+    "CATEGORY_ID" : 3,
+    "CODE" : "D",
+    "DESCRIPTION" : "Data",
+    "SHORT" : "datebox",
+    "PARENT_ID" : null,
+    "ORDERING" : 1,
+    "CREATED" : "$TSTP$:2019-04-15 09:53:49",
+    "UPDATED" : "$TSTP$:2020-10-16 14:55:53",
+    "VALUE" : null,
+    "VERSION" : 1
+  }, {
+    "ID" : 10,
+    "CATEGORY_ID" : 3,
+    "CODE" : "C",
+    "DESCRIPTION" : "Combobox",
+    "SHORT" : "combobox",
+    "PARENT_ID" : null,
+    "ORDERING" : 3,
+    "CREATED" : "$TSTP$:2019-09-23 16:22:50",
+    "UPDATED" : "$TSTP$:2020-10-16 14:55:53",
+    "VALUE" : "",
+    "VERSION" : 1
+  }, {
+    "ID" : 11,
+    "CATEGORY_ID" : 3,
+    "CODE" : "TL",
+    "DESCRIPTION" : "Casella di testo LIKE",
+    "SHORT" : "like_textbox",
+    "PARENT_ID" : null,
+    "ORDERING" : 4,
+    "CREATED" : "$TSTP$:2019-09-23 16:23:18",
+    "UPDATED" : "$TSTP$:2020-10-16 14:55:53",
+    "VALUE" : "",
+    "VERSION" : 1
+  }, {
+    "ID" : 26,
+    "CATEGORY_ID" : 10,
+    "CODE" : "TODAY",
+    "DESCRIPTION" : "Oggi",
+    "SHORT" : "Calcola oggi",
+    "PARENT_ID" : null,
+    "ORDERING" : 0,
+    "CREATED" : "$TSTP$:2019-04-15 09:47:59",
+    "UPDATED" : "$TSTP$:2020-02-24 11:25:18",
+    "VALUE" : "SELECT CURDATE() AS VALUE FROM mp_settings",
+    "VERSION" : 1
+  }, {
+    "ID" : 27,
+    "CATEGORY_ID" : 10,
+    "CODE" : "YSTDY",
+    "DESCRIPTION" : "Ieri",
+    "SHORT" : "Calcola Ieri",
+    "PARENT_ID" : null,
+    "ORDERING" : 1,
+    "CREATED" : "$TSTP$:2020-02-24 11:05:00",
+    "UPDATED" : "$TSTP$:2020-02-24 11:25:43",
+    "VALUE" : " SELECT SUBDATE(CURDATE(), 1) AS VALUE FROM mp_settings;",
+    "VERSION" : 1
+  }, {
+    "ID" : 28,
+    "CATEGORY_ID" : 10,
+    "CODE" : "FDOW",
+    "DESCRIPTION" : "Primo giorno settimana corrente",
+    "SHORT" : "1.o giorno sett. corrente",
+    "PARENT_ID" : null,
+    "ORDERING" : 2,
+    "CREATED" : "$TSTP$:2020-02-24 11:06:29",
+    "UPDATED" : "$TSTP$:2020-02-24 11:26:15",
+    "VALUE" : "SELECT DATE(CURDATE() + INTERVAL(WEEKDAY(CURDATE())) DAY) FROM mp_settings;",
+    "VERSION" : 1
+  }, {
+    "ID" : 29,
+    "CATEGORY_ID" : 10,
+    "CODE" : "FDOM",
+    "DESCRIPTION" : "Primo giorno mese corrente",
+    "SHORT" : "1.o giorno mese corrente",
+    "PARENT_ID" : null,
+    "ORDERING" : 3,
+    "CREATED" : "$TSTP$:2020-02-24 11:12:10",
+    "UPDATED" : "$TSTP$:2020-02-24 11:29:56",
+    "VALUE" : "SELECT DATE(CURDATE() - DAYOFMONTH(CURDATE()) + 1) AS VALUE FROM mp_settings;",
+    "VERSION" : 1
+  }, {
+    "ID" : 30,
+    "CATEGORY_ID" : 10,
+    "CODE" : "FDOY",
+    "DESCRIPTION" : "Primo giorno dell?anno corrente",
+    "SHORT" : "1.o giorno dell?anno corr",
+    "PARENT_ID" : null,
+    "ORDERING" : 4,
+    "CREATED" : "$TSTP$:2020-02-24 11:13:12",
+    "UPDATED" : "$TSTP$:2020-02-24 11:30:10",
+    "VALUE" : "SELECT  DATE_FORMAT(NOW() ,'%Y-01-01') AS VALUE FROM mp_settings;",
+    "VERSION" : 1
+  }, {
+    "ID" : 31,
+    "CATEGORY_ID" : 10,
+    "CODE" : "LDCW",
+    "DESCRIPTION" : "Ultimo giorno settimana corrente",
+    "SHORT" : "Ult. giorno sett. corr.",
+    "PARENT_ID" : null,
+    "ORDERING" : 5,
+    "CREATED" : "$TSTP$:2020-02-24 11:16:53",
+    "UPDATED" : "$TSTP$:2020-02-24 11:16:53",
+    "VALUE" : "SELECT DATE(CURDATE() + INTERVAL(6-WEEKDAY(CURDATE())) DAY) FROM mp_settings;",
+    "VERSION" : 1
+  }, {
+    "ID" : 32,
+    "CATEGORY_ID" : 10,
+    "CODE" : "LDOM",
+    "DESCRIPTION" : "Ultimo giorno mese corrente",
+    "SHORT" : "Ult. giorno mese corr.",
+    "PARENT_ID" : null,
+    "ORDERING" : 6,
+    "CREATED" : "$TSTP$:2020-02-24 11:17:44",
+    "UPDATED" : "$TSTP$:2020-02-24 11:17:44",
+    "VALUE" : "SELECT LAST_DAY(CURDATE()) AS VALUE FROM mp_settings;",
+    "VERSION" : 1
+  }, {
+    "ID" : 33,
+    "CATEGORY_ID" : 10,
+    "CODE" : "LDOY",
+    "DESCRIPTION" : "Ultimo giorno anno corrente",
+    "SHORT" : "Ult. giorno anno corr.",
+    "PARENT_ID" : null,
+    "ORDERING" : 7,
+    "CREATED" : "$TSTP$:2020-02-24 11:19:32",
+    "UPDATED" : "$TSTP$:2020-02-24 11:19:32",
+    "VALUE" : "SELECT  DATE_FORMAT(NOW() ,'%Y-12-31') AS VALUE FROM mp_settings;",
+    "VERSION" : 1
+  }, {
+    "ID" : 34,
+    "CATEGORY_ID" : 10,
+    "CODE" : "FDOPW",
+    "DESCRIPTION" : "Primo giorno settimana precedente",
+    "SHORT" : "Primo giorno sett. prec.",
+    "PARENT_ID" : null,
+    "ORDERING" : 8,
+    "CREATED" : "$TSTP$:2020-02-24 11:20:49",
+    "UPDATED" : "$TSTP$:2020-02-24 11:30:41",
+    "VALUE" : "SELECT DATE(CURDATE() + INTERVAL(WEEKDAY(CURDATE()) - 7) DAY) AS VALUE FROM mp_settings;",
+    "VERSION" : 1
+  }, {
+    "ID" : 35,
+    "CATEGORY_ID" : 10,
+    "CODE" : "FDOPM",
+    "DESCRIPTION" : "Primo giorno mese precedente",
+    "SHORT" : "Primo giorno mese prec.",
+    "PARENT_ID" : null,
+    "ORDERING" : 9,
+    "CREATED" : "$TSTP$:2020-02-24 11:21:28",
+    "UPDATED" : "$TSTP$:2020-02-24 11:21:28",
+    "VALUE" : "SELECT (((current_date - EXTRACT(DAY FROM current_timestamp)::INTEGER) + 1) - interval '1 month') AS VALUE FROM mp_settings;\r\n",
+    "VERSION" : 1
+  }, {
+    "ID" : 36,
+    "CATEGORY_ID" : 10,
+    "CODE" : "FDOPY",
+    "DESCRIPTION" : "Primo giorno dell?anno precedente",
+    "SHORT" : "Primo giorno anno prec.",
+    "PARENT_ID" : null,
+    "ORDERING" : 10,
+    "CREATED" : "$TSTP$:2020-02-24 11:22:10",
+    "UPDATED" : "$TSTP$:2020-02-24 11:22:10",
+    "VALUE" : "SELECT (((current_date - EXTRACT(DOY FROM current_timestamp)::INTEGER) + 1) - interval '1 year') AS VALUE FROM mp_settings\r\n",
+    "VERSION" : 1
+  }, {
+    "ID" : 37,
+    "CATEGORY_ID" : 10,
+    "CODE" : "LDOPW",
+    "DESCRIPTION" : "Ultimo giorno settimana precedente",
+    "SHORT" : "Ultimo giorno sett. prec.",
+    "PARENT_ID" : null,
+    "ORDERING" : 11,
+    "CREATED" : "$TSTP$:2020-02-24 11:22:58",
+    "UPDATED" : "$TSTP$:2020-02-24 11:22:58",
+    "VALUE" : "SELECT DATE(CURDATE() + INTERVAL(WEEKDAY(CURDATE()) -1) DAY) FROM mp_settings;",
+    "VERSION" : 1
+  }, {
+    "ID" : 38,
+    "CATEGORY_ID" : 10,
+    "CODE" : "LDOPM",
+    "DESCRIPTION" : "Ultimo giorno mese precedente",
+    "SHORT" : "Ultimo giorno mese prec.",
+    "PARENT_ID" : null,
+    "ORDERING" : 12,
+    "CREATED" : "$TSTP$:2020-02-24 11:23:54",
+    "UPDATED" : "$TSTP$:2020-02-24 11:23:54",
+    "VALUE" : "SELECT DATE(CURDATE() - DAYOFMONTH(CURDATE())) AS VALUE FROM mp_settings;",
+    "VERSION" : 1
+  }, {
+    "ID" : 39,
+    "CATEGORY_ID" : 10,
+    "CODE" : "LDOPY",
+    "DESCRIPTION" : "Ultimo giorno dell?anno precedente",
+    "SHORT" : "Ultimo giorno anno prec.",
+    "PARENT_ID" : null,
+    "ORDERING" : 13,
+    "CREATED" : "$TSTP$:2020-02-24 11:24:36",
+    "UPDATED" : "$TSTP$:2020-02-24 11:30:56",
+    "VALUE" : "SELECT  DATE(SUBDATE(NOW() , DAYOFYEAR(NOW()))) AS VALUE FROM mp_settings;",
+    "VERSION" : 1
+  }, {
+    "ID" : 40,
+    "CATEGORY_ID" : 3,
+    "CODE" : "AC",
+    "DESCRIPTION" : "Autocomplete",
+    "SHORT" : "autocomplete",
+    "PARENT_ID" : null,
+    "ORDERING" : 5,
+    "CREATED" : "$TSTP$:2020-03-04 13:44:07",
+    "UPDATED" : "$TSTP$:2020-10-16 14:55:53",
+    "VALUE" : "",
+    "VERSION" : 1
+  }, {
+    "ID" : 41,
+    "CATEGORY_ID" : 11,
+    "CODE" : "DSP",
+    "DESCRIPTION" : "Chiamata con Dispatcher",
+    "SHORT" : "Dispatcher Call",
+    "PARENT_ID" : null,
+    "ORDERING" : 0,
+    "CREATED" : "$TSTP$:2020-04-27 14:45:22",
+    "UPDATED" : "$TSTP$:2020-04-27 14:47:22",
+    "VALUE" : "",
+    "VERSION" : 1
+  }, {
+    "ID" : 42,
+    "CATEGORY_ID" : 11,
+    "CODE" : "CTX",
+    "DESCRIPTION" : "Chiamata di contesto",
+    "SHORT" : "Context Call",
+    "PARENT_ID" : null,
+    "ORDERING" : 1,
+    "CREATED" : "$TSTP$:2020-04-27 14:46:43",
+    "UPDATED" : "$TSTP$:2020-04-27 14:47:46",
+    "VALUE" : "",
+    "VERSION" : 1
+  }, {
+    "ID" : 43,
+    "CATEGORY_ID" : 11,
+    "CODE" : "URL",
+    "DESCRIPTION" : "Url Semplice",
+    "SHORT" : "Url Call",
+    "PARENT_ID" : null,
+    "ORDERING" : 2,
+    "CREATED" : "$TSTP$:2020-04-27 14:48:20",
+    "UPDATED" : "$TSTP$:2020-04-27 14:48:20",
+    "VALUE" : "",
+    "VERSION" : 1
+  }, {
+    "ID" : 46,
+    "CATEGORY_ID" : 3,
+    "CODE" : "DR",
+    "DESCRIPTION" : "Range",
+    "SHORT" : "Range",
+    "PARENT_ID" : null,
+    "ORDERING" : 2,
+    "CREATED" : "$TSTP$:2020-10-16 14:55:42",
+    "UPDATED" : "$TSTP$:2020-10-16 14:55:53",
+    "VALUE" : "",
+    "VERSION" : 1
+  }, {
+    "ID" : 47,
+    "CATEGORY_ID" : 4,
+    "CODE" : "N",
+    "DESCRIPTION" : "Numero",
+    "SHORT" : "Numero",
+    "PARENT_ID" : null,
+    "ORDERING" : 2,
+    "CREATED" : "$TSTP$:2021-07-12 11:02:21",
+    "UPDATED" : "$TSTP$:2021-07-12 11:02:21",
+    "VALUE" : "",
+    "VERSION" : 1
+  }, {
+    "ID" : 48,
+    "CATEGORY_ID" : 17,
+    "CODE" : "TH1",
+    "DESCRIPTION" : "Test Frammento HTML",
+    "SHORT" : "HTML",
+    "PARENT_ID" : null,
+    "ORDERING" : 1,
+    "CREATED" : "$TSTP$:2021-08-04 09:51:31",
+    "UPDATED" : "$TSTP$:2021-08-04 09:51:49",
+    "VALUE" : "<p>Testo html</p><table style=\"border-collapse: collapse; width: 100%;\" border=\"1\"><tbody><tr><td style=\"width: 49.5238%;\">UNO</td><td style=\"width: 49.5238%;\">DUE</td></tr><tr><td style=\"width: 49.5238%;\">TRE</td><td style=\"width: 49.5238%;\">QUATTRO</td></tr></tbody></table>",
+    "VERSION" : 1
+  }, {
+    "ID" : 49,
+    "CATEGORY_ID" : 17,
+    "CODE" : "TRTF1",
+    "DESCRIPTION" : "Test Frammento RTF",
+    "SHORT" : "RTF",
+    "PARENT_ID" : null,
+    "ORDERING" : 2,
+    "CREATED" : "$TSTP$:2021-08-04 09:52:24",
+    "UPDATED" : "$TSTP$:2021-08-04 10:06:56",
+    "VALUE" : "{\\rtf1\\ansi\\deff3\\adeflang1025\r\n{\\fonttbl{\\f0\\froman\\fprq2\\fcharset0 Times New Roman;}{\\f1\\froman\\fprq2\\fcharset2 Symbol;}{\\f2\\fswiss\\fprq2\\fcharset0 Arial;}{\\f3\\fswiss\\fprq0\\fcharset128 Verdana;}{\\f4\\fswiss\\fprq0\\fcharset128 Liberation Sans{\\*\\falt Arial};}{\\f5\\fnil\\fprq2\\fcharset0 Microsoft YaHei;}{\\f6\\fnil\\fprq2\\fcharset0 Lucida Sans;}{\\f7\\fswiss\\fprq0\\fcharset128 Lucida Sans;}}\r\n{\\colortbl;\\red0\\green0\\blue0;\\red238\\green238\\blue238;\\red128\\green128\\blue128;}\r\n{\\stylesheet{\\s0\\snext0\\nowidctlpar{\\*\\hyphen2\\hyphlead2\\hyphtrail2\\hyphmax0}\\cf0\\hich\\af8\\langfe2052\\dbch\\af6\\afs24\\lang1081\\loch\\f3\\fs20\\lang1040 Predefinito;}\r\n{\\s15\\sbasedon0\\snext16\\sb240\\sa120\\keepn\\hich\\af5\\dbch\\af6\\afs28\\loch\\f4\\fs28 Intestazione;}\r\n{\\s16\\sbasedon0\\snext16\\sb0\\sa120 Corpo testo;}\r\n{\\s17\\sbasedon16\\snext17\\sb0\\sa120\\dbch\\af7\\loch\\f3 Elenco;}\r\n{\\s18\\sbasedon0\\snext18\\sb120\\sa120\\noline\\i\\dbch\\af7\\afs24\\ai\\loch\\f3\\fs20 Didascalia;}\r\n{\\s19\\sbasedon0\\snext19\\noline\\dbch\\af7\\loch\\f3 Indice;}\r\n{\\s20\\sbasedon0\\snext20\\noline Contenuto tabella;}\r\n{\\s21\\sbasedon20\\snext21\\qc\\noline\\b\\ab Intestazione tabella;}\r\n}{\\info{\\creatim\\yr0\\mo0\\dy0\\hr0\\min0}{\\revtim\\yr0\\mo0\\dy0\\hr0\\min0}{\\printim\\yr0\\mo0\\dy0\\hr0\\min0}{\\comment OpenOffice}{\\vern41100}}\\deftab709\r\n\r\n{\\*\\pgdsctbl\r\n{\\pgdsc0\\pgdscuse195\\pgwsxn11906\\pghsxn16838\\marglsxn1134\\margrsxn1134\\margtsxn1134\\margbsxn1134\\pgdscnxt0 Predefinito;}}\r\n\\formshade\\paperh16838\\paperw11906\\margl1134\\margr1134\\margt1134\\margb1134\\sectd\\sbknone\\sectunlocked1\\pgndec\\pgwsxn11906\\pghsxn16838\\marglsxn1134\\margrsxn1134\\margtsxn1134\\margbsxn1134\\ftnbj\\ftnstart1\\ftnrstcont\\ftnnar\\aenddoc\\aftnrstcont\\aftnstart1\\aftnnrlc\r\n\\pgndec\\pard\\plain \\s0\\nowidctlpar{\\*\\hyphen2\\hyphlead2\\hyphtrail2\\hyphmax0}\\cf0\\hich\\af8\\langfe2052\\dbch\\af6\\afs24\\lang1081\\loch\\f3\\fs20\\lang1040{\\rtlch \\ltrch\\loch\r\nQuesto \\u232\\'e8 un testo RTF}\r\n\\par \\pard\\plain \\s0\\nowidctlpar{\\*\\hyphen2\\hyphlead2\\hyphtrail2\\hyphmax0}\\cf0\\hich\\af8\\langfe2052\\dbch\\af6\\afs24\\lang1081\\loch\\f3\\fs20\\lang1040{\\rtlch \\ltrch\\loch\r\n}\r\n\\par \\trowd\\trql\\ltrrow\\trpaddft3\\trpaddt55\\trpaddfl3\\trpaddl55\\trpaddfb3\\trpaddb55\\trpaddfr3\\trpaddr55\\clbrdrt\\brdrs\\brdrw1\\brdrcf1\\clbrdrl\\brdrs\\brdrw1\\brdrcf1\\clbrdrb\\brdrs\\brdrw1\\brdrcf1\\clcbpat2\\cellx3212\\clbrdrt\\brdrs\\brdrw1\\brdrcf1\\clbrdrl\\brdrs\\brdrw1\\brdrcf1\\clbrdrb\\brdrs\\brdrw1\\brdrcf1\\clcbpat2\\cellx6424\\clbrdrt\\brdrs\\brdrw1\\brdrcf1\\clbrdrl\\brdrs\\brdrw1\\brdrcf1\\clbrdrb\\brdrs\\brdrw1\\brdrcf1\\clbrdrr\\brdrs\\brdrw1\\brdrcf1\\clcbpat2\\cellx9636\\pard\\plain \\s21\\qc\\noline\\b\\ab\\intbl{\\rtlch \\ltrch\\loch\r\nHeader1}\\cell\\pard\\plain \\s21\\qc\\noline\\b\\ab\\intbl{\\rtlch \\ltrch\\loch\r\nHeader2}\\cell\\pard\\plain \\s21\\qc\\noline\\b\\ab\\intbl{\\rtlch \\ltrch\\loch\r\nHeader3}\\cell\\row\\trowd\\trql\\ltrrow\\trpaddft3\\trpaddt55\\trpaddfl3\\trpaddl55\\trpaddfb3\\trpaddb55\\trpaddfr3\\trpaddr55\\clbrdrl\\brdrs\\brdrw1\\brdrcf1\\clbrdrb\\brdrs\\brdrw1\\brdrcf1\\cellx3212\\clbrdrl\\brdrs\\brdrw1\\brdrcf1\\clbrdrb\\brdrs\\brdrw1\\brdrcf1\\cellx6424\\clbrdrl\\brdrs\\brdrw1\\brdrcf1\\clbrdrb\\brdrs\\brdrw1\\brdrcf1\\clbrdrr\\brdrs\\brdrw1\\brdrcf1\\cellx9636\\pard\\plain \\s20\\noline\\intbl{\\rtlch \\ltrch\\loch\r\nCella 1}\\cell\\pard\\plain \\s20\\noline\\intbl{\\rtlch \\ltrch\\loch\r\nCella 2}\\cell\\pard\\plain \\s20\\noline\\intbl{\\rtlch \\ltrch\\loch\r\nCella 3}\\cell\\row\\trowd\\trql\\ltrrow\\trpaddft3\\trpaddt55\\trpaddfl3\\trpaddl55\\trpaddfb3\\trpaddb55\\trpaddfr3\\trpaddr55\\clbrdrl\\brdrs\\brdrw1\\brdrcf1\\clbrdrb\\brdrs\\brdrw1\\brdrcf1\\cellx3212\\clbrdrl\\brdrs\\brdrw1\\brdrcf1\\clbrdrb\\brdrs\\brdrw1\\brdrcf1\\cellx6424\\clbrdrl\\brdrs\\brdrw1\\brdrcf1\\clbrdrb\\brdrs\\brdrw1\\brdrcf1\\clbrdrr\\brdrs\\brdrw1\\brdrcf1\\cellx9636\\pard\\plain \\s20\\noline\\intbl{\\rtlch \\ltrch\\loch\r\nCella 4}\\cell\\pard\\plain \\s20\\noline\\intbl{\\rtlch \\ltrch\\loch\r\nCella 5}\\cell\\pard\\plain \\s20\\noline\\intbl{\\rtlch \\ltrch\\loch\r\nCella 6}\\cell\\row\\pard\\plain \\s0\\nowidctlpar{\\*\\hyphen2\\hyphlead2\\hyphtrail2\\hyphmax0}\\cf0\\hich\\af8\\langfe2052\\dbch\\af6\\afs24\\lang1081\\loch\\f3\\fs20\\lang1040{\\rtlch \\ltrch\\loch\r\n}\r\n\\par \\pard\\plain \\s0\\nowidctlpar{\\*\\hyphen2\\hyphlead2\\hyphtrail2\\hyphmax0}\\cf0\\hich\\af8\\langfe2052\\dbch\\af6\\afs24\\lang1081\\loch\\f3\\fs20\\lang1040{\\rtlch \\ltrch\\loch\r\n}\r\n\\par }\r\n",
+    "VERSION" : 1
+  } ]
+}

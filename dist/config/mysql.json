@@ -1,0 +1,16 @@
+{
+	"dataDir":  "data/",
+	"fieldToLowerCase": false,
+	"prettyPrint":  true,
+	"tables":  [ "mp_projects", "mp_templates" ],
+	"connection": {
+		"type": "mysql",
+		"initString": null,
+		"jdbcUrl": "jdbc:mysql://localhost:3306/mon246_blank",
+		"user": "joomla",
+		"password": "j00ml4"
+	},
+	"drivers": [
+		{"name": "mysql", "className": "com.mysql.jdbc.Driver", "jarFile": "lib/mysql-5.1.18.jar"}
+    ]
+}

@@ -1,0 +1,14 @@
+{
+	"dataDir":  "data/",
+	"fieldToLowerCase":  false,
+	"prettyPrint":  true,
+	"tables":  [ "customers", "employees", "invoices", "invoice_items", "artists", "albums", "media_types", "genres", "tracks", "playlist_track"  ],
+	"connection": {
+		"type": "sqlite",
+		"initString": null,
+		"jdbcUrl": "jdbc:sqlite:./sqlite/test.sqlite"
+	},
+	"drivers": [
+		{"name": "sqlite", "className": "org.sqlite.JDBC", "jarFile": "lib/sqlite-jdbc-3.32.3.8.jar"}
+    ]
+}

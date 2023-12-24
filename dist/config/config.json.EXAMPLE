@@ -1,0 +1,56 @@
+{
+	"HOW TO USE THIS FILE": [
+		"----------- COMMENTS ON REQUIRED SECTIONS -------------",
+		"- dataDir: the path where save or read jsons file. The files must match the table names in tables section (products must be products.json). dataDir can be overriden from command line argument --dataDir [yourpath]",
+		"- tables: array of tables to export/import",
+		"- connection: self explanatory. property [type] must much the property [name] in driver section",
+		"- drivers: list of drivers and location of jdbc library.jar",
+		"----------- ----------------------------- -------------",
+		"For command line options execute: java -jar JDBMig-x.x.x.jar",
+	    "Other properties where ignored and treated as comments"
+	],
+	"dataDir": "data/",
+	"fieldToLowerCase": false,
+	"prettyPrint": false,
+	"tables":  [ "table1", "table2" ],
+	"EXAMPLE",  "----------- ORACLE XE ----------------",
+	"ORACLE_connection": {
+		"type": "oracle",
+		"initStrings": [
+				"ALTER SESSION SET NLS_DATE_FORMAT='YYYY-MM-DD HH24:MI:SS'",
+				"ALTER SESSION SET NLS_TIMESTAMP_FORMAT='YYYY-MM-DD HH24:MI:SS'"
+		"jdbcUrl": "jdbc:oracle:thin:@//localhost:1521/XEPDB1",
+		"user": "user",
+		"password": "password"
+	},
+	"EXAMPLE",  "----------- POSTGRES ----------------",
+    "POSTGRES_connection": {
+		"type": "postgres",
+		"initString": null,
+		"jdbcUrl": "jdbc:postgresql://localhost:5432/DATABASE_NAME?currentSchema=SCHEMA",
+		"user": "user",
+		"password": "password"
+	},
+	"EXAMPLE",  "----------- MYSQL ----------------",
+    "MYSQL_connection": {
+		"type": "mysql",
+		"initString": null,
+		"jdbcUrl": "jdbc:mysql://localhost:3306/DATABASE_NAME",
+		"user": "user",
+		"password": "password"
+	},
+	"EXAMPLE",  "----------- SQLITE  ----------------",
+	"SQLITE_connection": {
+		"type": "sqlite",
+		"initString": null,
+		"jdbcUrl": "jdbc:sqlite:./sqlite/test.sqlite"
+	},
+	"DRIVER SECTION",  "----------- SUPPORTED DRIVERS AND VERSIONS ----------------",
+	"drivers": [
+		{"name": "mysql",    "className": "com.mysql.jdbc.Driver",           "jarFile": "lib/mysql-5.1.18.jar"},
+		{"name": "postgres", "className": "org.postgresql.Driver",           "jarFile": "lib/pgsql-42.2.15.jar"},
+		{"name": "oracle",   "className": "oracle.jdbc.driver.OracleDriver", "jarFile": "lib/ojdbc8.jar"},
+        {"name": "sqlite",   "className": "org.sqlite.JDBC",                 "jarFile": "lib/sqlite-jdbc-3.32.3.8.jar"}
+		{"name": "informix", "className": "com.informix.jdbc.IfxDriver",     "jarFile": "lib/ifxjdbc.jar"}
+    ]
+}
