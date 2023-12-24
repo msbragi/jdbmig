@@ -1,9 +1,13 @@
 # jdbmig
+Versions: 
+- 1.0.0 First release
+
 I have looked around to find an utility jdbc based, to download and upload data to different databases, but didn't found anything. For this reason i decided to build my own.
 
 JDBMig is an agnostic java application that uses jdbc to export and import data into different databases.
 
 All the process is done by jdbc drivers. 
+<br>You can download the drivers i used from here https://github.com/msbragi/jdbmig-driverpack
 
 The configuration file 
 <pre>
@@ -17,6 +21,4 @@ Example: java -jar .\JDBMig-1.0.0.jar -x -c .\config\sqlite.json -d .\test
 
 View dist/config/config.json.EXAMPLE for help on configuration file
 
-Versions: 
-- 1.0.0 First release
 </pre>
