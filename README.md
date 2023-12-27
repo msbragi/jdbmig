@@ -64,7 +64,9 @@ Before import you can adjust something using the fields array.
 The <b>type</b> defines the sql.data.type (view Java.sql.type.txt for reference)
 The <b>renameTo</b> property permits you to change the name of destination field in database.
 The <b>dflt</b> property permits you to define a value to put if source value of data.field is null.
-If you change the value of <b>name</b> property the relative field in data section will not be imported.
+
+ATTENTION: if you change a name field in fields array an error occurs when importing data.
+If you don't want to import a field data, remove the field from fields array.
 </pre>
 
 
