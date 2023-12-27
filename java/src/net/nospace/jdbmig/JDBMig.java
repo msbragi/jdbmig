@@ -136,6 +136,7 @@ public class JDBMig {
         System.out.println("--import|-i:\t\timport data from json file");
         System.out.println("--export|-x:\t\texport data to json file");
         System.out.println("--useConn|-u conn:\tthe connection to use (if not have standard [connection] defined or more than one)");
+        System.out.println("\t\t\t(optional this option override \"connection\"  or \"useConn\" defined in [config].json)");
         System.out.println("--dataDir|-d path:\tthe directory where store json files or read from");
         System.out.println("\t\t\t(optional this option override the one defined in config.json)");
         System.out.println();

@@ -38,7 +38,8 @@ public class JExport {
                 ResultSet resultSet = connection.executeQuery("SELECT * FROM " + table);
                 TableTo result = resultSet2Table(resultSet, table, config.getFieldToLowerCase());
                 resultSet.close();
-                String json = JsonUtil.getMapper().writeValueAsString(result);
+                //String json = JsonUtil.getMapper().writeValueAsString(result);
+                String json = normalizeJson(result);
                 String fileName = config.getDataDir() + table + ".json";
                 System.out.printf("Write table: %s to %s%n", table, fileName);
                 saveTable(fileName, json);
@@ -86,6 +87,26 @@ public class JExport {
             outputStreamWriter.write(data); // json is your data 
             outputStreamWriter.flush();
         }
+    }
+
+    private static String normalizeJson(TableTo table) throws JsonProcessingException, IOException {
+        String name = table.getName();
+        String fields = buildJsonFields(table.getFields());
+        String data = JsonUtil.getMapper().writeValueAsString(table.getData());
+        String format = "{%n\"name\": \"%s\",%n\"fields\": [%n%s%n],%n\"data\": %s%n}";
+        String json = String.format(format, name, fields, data);
+        return json.replaceAll("\\r", "");
+    }
+
+    private static String buildJsonFields(List<FieldTo> fields) {
+        List<String> jFields = new ArrayList<>(); 
+        for (FieldTo field : fields) {
+            String t = "\t{\"name\": \"$name\",\t\"type\": $type,\t\"renameTo\": null,\t\"dflt\": null}";
+            t = t.replace("$name", field.getName());
+            t = t.replace("$type", field.getType().toString());
+            jFields.add(t);
+        }
+        return String.join(",\n", jFields);
     }
 
 }

@@ -2,7 +2,7 @@
 	"HOW TO USE THIS FILE": [
 		"-----------  REQUIRED PROPERTIES -------------",
 		"- dataDir:		the path where save or read jsons file. The files must match the table names in tables section (products must be products.json).",
-        "				dataDir can be overriden from command line argument --dataDir [yourpath]",
+		"				dataDir can be overriden from command line argument --dataDir [yourpath]",
 		"- tables:		array of tables to export/import",
 		"- connection:	self explanatory. property [type] must much the property [name] in driver section",
 		"				instead of connection property you can have more then one connections defined and use",
@@ -60,7 +60,7 @@
 		{"name": "mysql",    "className": "com.mysql.jdbc.Driver",           "jarFile": "lib/mysql-5.1.18.jar"},
 		{"name": "postgres", "className": "org.postgresql.Driver",           "jarFile": "lib/pgsql-42.2.15.jar"},
 		{"name": "oracle",   "className": "oracle.jdbc.driver.OracleDriver", "jarFile": "lib/ojdbc8.jar"},
-        {"name": "sqlite",   "className": "org.sqlite.JDBC",                 "jarFile": "lib/sqlite-jdbc-3.32.3.8.jar"},
+		{"name": "sqlite",   "className": "org.sqlite.JDBC",                 "jarFile": "lib/sqlite-jdbc-3.32.3.8.jar"},
 		{"name": "informix", "className": "com.informix.jdbc.IfxDriver",     "jarFile": "lib/ifxjdbc.jar"}
     ]
 }
