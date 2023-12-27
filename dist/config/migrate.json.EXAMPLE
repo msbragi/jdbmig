@@ -1,0 +1,28 @@
+{
+	"dataDir": "data/",
+	"fieldToLowerCase": false,
+	"prettyPrint": false,
+	"tables":  [ "table1", "table2" ],
+	"useConn":  "source",
+	"source": {
+		"type": "oracle",
+		"initStrings": [
+				"ALTER SESSION SET NLS_DATE_FORMAT='YYYY-MM-DD HH24:MI:SS'",
+				"ALTER SESSION SET NLS_TIMESTAMP_FORMAT='YYYY-MM-DD HH24:MI:SS'"
+		],
+		"jdbcUrl": "jdbc:oracle:thin:@//localhost:1521/XEPDB1",
+		"user": "user",
+		"password": "password"
+	},
+    "dest": {
+		"type": "postgres",
+		"initString": null,
+		"jdbcUrl": "jdbc:postgresql://localhost:5432/DATABASE_NAME?currentSchema=SCHEMA_NAME",
+		"user": "user",
+		"password": "password"
+	},
+	"drivers": [
+		{"name": "postgres", "className": "org.postgresql.Driver",           "jarFile": "lib/pgsql-42.2.15.jar"},
+		{"name": "oracle",   "className": "oracle.jdbc.driver.OracleDriver", "jarFile": "lib/ojdbc8.jar"}
+    ]
+}

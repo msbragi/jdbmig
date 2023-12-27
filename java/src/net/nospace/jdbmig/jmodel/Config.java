@@ -8,11 +8,13 @@ public class Config {
     private String dataDir;
     private Boolean fieldToLowerCase;
     private Boolean prettyPrint;
+    private String useConn;
     private List<String> tables;
     private ConnectionTo connection;
     private List<DriverTo> drivers;
 
     public Config() {
+        useConn = null;
         drivers = new ArrayList<>();
         tables = new ArrayList<>();
         fieldToLowerCase = false;
@@ -72,6 +74,14 @@ public class Config {
 
     public void setPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
+    }
+
+    public String getUseConn() {
+        return useConn;
+    }
+
+    public void setUseConn(String useConn) {
+        this.useConn = useConn;
     }
 
     public DriverTo useDriver() {

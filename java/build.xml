@@ -20,8 +20,8 @@
         </manifest>
     </target>
     <target name="-post-jar">
-        <copy file="${dist.jar}" todir="../dist"/>
-        <copy file="README.txt" todir="../dist"/>
+        <copy file="${dist.jar}" tofile="../dist/${apps}.jar" />
+        <copy file="README.txt" todir="../dist" />
     </target>    <!--
 
     There exist several targets which are by default empty and which can be 

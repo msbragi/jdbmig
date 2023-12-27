@@ -1,10 +1,6 @@
 package net.nospace.jdbmig.jexport;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ObjectNode;
-import com.fasterxml.jackson.databind.node.TextNode;
 import net.nospace.jdbmig.jutil.JParseValue;
 import net.nospace.jdbmig.jcommon.DynamicConnect;
 import net.nospace.jdbmig.jmodel.Config;
@@ -42,7 +38,6 @@ public class JExport {
                 ResultSet resultSet = connection.executeQuery("SELECT * FROM " + table);
                 TableTo result = resultSet2Table(resultSet, table, config.getFieldToLowerCase());
                 resultSet.close();
-                // String json = normalizeJson(result);
                 String json = JsonUtil.getMapper().writeValueAsString(result);
                 String fileName = config.getDataDir() + table + ".json";
                 System.out.printf("Write table: %s to %s%n", table, fileName);
@@ -65,7 +60,7 @@ public class JExport {
         int columnCount = rsmd.getColumnCount();
         long rowCount = 0;
         while (rs.next()) {
-            Map row = new LinkedHashMap();
+            Map<String, Object> row = new LinkedHashMap<>();
             for (int i = 1; i <= columnCount; i++) {
                 int columnType = rsmd.getColumnType(i);
                 String fieldName = rsmd.getColumnName(i);
@@ -91,31 +86,6 @@ public class JExport {
             outputStreamWriter.write(data); // json is your data 
             outputStreamWriter.flush();
         }
-    }
-
-    private static String normalizeJson(TableTo result) throws JsonProcessingException, IOException {
-        String jsonFields = buildJsonFields(result.getFields()); 
-        ObjectMapper mapper = JsonUtil.getMapper();
-        String json = mapper.writeValueAsString(result);
-
-        JsonNode root = mapper.readTree(json);
-        ObjectNode jsonNode = (ObjectNode)root.get("fields");
-        JsonNode fieldsNode = new TextNode(jsonFields);
-        jsonNode.replace("fields", fieldsNode);
-
-        return json;
-    }
-
-    private static String buildJsonFields(List<FieldTo> fields) {
-        List<String> jFields = new ArrayList<>(); 
-        for (FieldTo field : fields) {
-            String t = "{\"name\": \"$name\", \"type\": $type \"}";
-            t = t.replace("$name", field.getName());
-            t = t.replace("$type", field.getType().toString());
-            jFields.add(t);
-        }
-        String result = "{\"fields\": [\n $list ]\n,\"}";
-        return result.replace("$list", String.join(",\n", jFields));
     }
 
 }
