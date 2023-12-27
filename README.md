@@ -12,13 +12,17 @@ All the process is done by jdbc drivers.
 <br>You can download the drivers i used from here https://github.com/msbragi/jdbmig-driverpack
 
 <pre>
-Usage: java -jar JDBMig-1.0.0 --import|--export --config config_file_path [--dataDir EXISTING_PATH]
+JDBMig 1.0.0 - (c) Marco Sbragi (m.sbragi@nospace.net)
+Usage: java -jar JDBMig.jar --import|--export --config config_file_path [--dataDir YOUR_EXISTING_PATH]
 --config|-c file:       configuration file see config/config.json as example
 --import|-i:            import data from json file
 --export|-x:            export data to json file
+--useConn|-u conn:      the connection to use (if not have standard [connection] defined or more than one)
+                        (optional this option override "connection"  or "useConn" defined in [config].json)
 --dataDir|-d path:      the directory where store json files or read from
-                        (optional this option override the one defined in [config].json)
-Example: java -jar .\JDBMig-1.0.0.jar -x -c .\config\sqlite.json -d .\test
+                        (optional this option override the one defined in config.json)
+
+Example: java -jar .\JDBMig.jar -x -c .\config\sqlite.json -d .\test
 </pre>
 View dist/config/config.json.EXAMPLE for help on configuration file
 
@@ -28,7 +32,7 @@ This is the config file for the SQLite included example:
 	"dataDir":  "data/",
 	"fieldToLowerCase":  false,
 	"prettyPrint":  true,
-	"tables":  [ "customers", "employees", "invoices", "invoice_items", "artists", "albums", "media_types", "genres", "tracks", "playlist_track"  ],
+	"tables":  [ "TEST", "artists", "albums", "media_types", "genres", "tracks", "playlist_track"  ],
 	"connection": {
 		"type": "sqlite",
 		"initString": null,
@@ -40,33 +44,21 @@ This is the config file for the SQLite included example:
 }
 
 For each table in tables array, jdbmig create a json file. 
-Example json file for exported artists table (artists.json):
+Example TEST.json
 {
-  "name" : "artists",
-  "fields" : [ {
-    "name" : "ArtistId",
-    "type" : 4,
-    "renameTo" : null,
-    "dflt" : null
-  }, {
-    "name" : "Name",
-    "type" : 12,
-    "renameTo" : null,
-    "dflt" : null
-  } ],
-  "data" : [ {
-    "ArtistId" : 1,
-    "Name" : "AC/DC"
-  }, {
-    "ArtistId" : 2,
-    "Name" : "Accept"
-  }, {
-    "ArtistId" : 3,
-    "Name" : "Aerosmith"
-  }, {
-    "ArtistId" : 4,
-    "Name" : "Alanis Morissette"
-  }]
+"name": "TEST",
+"fields": [
+	{"name": "ID",		"type": 2,	"renameTo": null,	"dflt": null},
+	{"name": "NAME",	"type": 12,	"renameTo": null,	"dflt": null},
+	{"name": "DESCRIPTION",	"type": 12,	"renameTo": null,	"dflt": null},
+	{"name": "SHORT",	"type": 12,	"renameTo": null,	"dflt": null},
+	{"name": "CODE",	"type": 12,	"renameTo": null,	"dflt": null},
+	{"name": "VERSION",	"type": 2,	"renameTo": null,	"dflt": null},
+	{"name": "CREATED",	"type": 93,	"renameTo": null,	"dflt": null},
+	{"name": "FDATE",	"type": 93,	"renameTo": null,	"dflt": null},
+	{"name": "FFLOAT",	"type": 2,	"renameTo": null,	"dflt": null}
+],
+"data": [{object}, {object}, {object}]
 }
 Before import you can adjust something using the fields array.
 The <b>type</b> defines the sql.data.type (view Java.sql.type.txt for reference)
