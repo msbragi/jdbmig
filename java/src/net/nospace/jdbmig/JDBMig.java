@@ -13,6 +13,7 @@ import net.nospace.jdbmig.jutil.JsonUtil;
 import net.nospace.jdbmig.jutil.jManifest;
 import java.io.File;
 import java.io.IOException;
+import net.nospace.jdbmig.jexecute.JExecute;
 import net.nospace.jdbmig.jmodel.ConnectionTo;
 
 public class JDBMig {
@@ -26,24 +27,29 @@ public class JDBMig {
     public static void main(String[] args) {
         if (!parseArgs(args)) {
             showHelp();
-            System.exit(1);
             return;
         }
         Config config = loadConfig();
         if (config == null || !parseConfig(config)) {
             showHelp();
-            //System.exit(1);
             return;
         }
         if (IMPORT) {
+            JExecute.bootstrap(config);
+            if (!JCheckConfig.checkImport(config)) {
+                return;
+            }
             JImport.execute(config);
         } else {
+            if (!JCheckConfig.checkExport(config)) {
+                return;
+            }
             if (config.getPrettyPrint()) {
                 JsonUtil.getMapper().configure(SerializationFeature.INDENT_OUTPUT, true);
             }
             JExport.execute(config);
         }
-        System.exit(0);
+        //System.exit(0);
     }
 
     private static Config loadConfig() {
@@ -112,12 +118,6 @@ public class JDBMig {
         }
         // Check for driver file
         if (!JCheckConfig.checkDriver(config)) {
-            return false;
-        }
-        if (IMPORT && !JCheckConfig.checkImport(config)) {
-            return false;
-        }
-        if (!IMPORT && !JCheckConfig.checkExport(config)) {
             return false;
         }
         return true;

@@ -68,7 +68,6 @@ public class JImport {
             case java.sql.Types.LONGVARBINARY:
             case java.sql.Types.VARBINARY:
             case java.sql.Types.BINARY:
-            case java.sql.Types.CLOB:
             case java.sql.Types.BLOB:
                 byte[] decode = JsonUtil.parseBase64(obj.toString());
                 pstmt.setBytes(fieldNum, decode);
@@ -76,6 +75,7 @@ public class JImport {
             case java.sql.Types.TIMESTAMP:
                 pstmt.setTimestamp(fieldNum, JsonUtil.stringToTimeStamp(obj.toString()));
                 return;
+            case java.sql.Types.CLOB:
             case java.sql.Types.NCLOB:
             case java.sql.Types.LONGNVARCHAR:
             case java.sql.Types.LONGVARCHAR:

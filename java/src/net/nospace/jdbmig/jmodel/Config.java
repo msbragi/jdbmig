@@ -12,9 +12,13 @@ public class Config {
     private List<String> tables;
     private ConnectionTo connection;
     private List<DriverTo> drivers;
+    private String bootstrap;
+    private String shutdown;
 
     public Config() {
         useConn = null;
+        bootstrap = null;
+        shutdown = null;
         drivers = new ArrayList<>();
         tables = new ArrayList<>();
         fieldToLowerCase = false;
@@ -82,6 +86,22 @@ public class Config {
 
     public void setUseConn(String useConn) {
         this.useConn = useConn;
+    }
+
+    public String getBootstrap() {
+        return bootstrap;
+    }
+
+    public void setBootstrap(String bootstrap) {
+        this.bootstrap = bootstrap;
+    }
+
+    public String getShutdown() {
+        return shutdown;
+    }
+
+    public void setShutdown(String shutdown) {
+        this.shutdown = shutdown;
     }
 
     public DriverTo useDriver() {

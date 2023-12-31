@@ -20,11 +20,10 @@ public class JParseValue {
             return null;
         }
 
-        String out;
         switch (type) {
             case java.sql.Types.CLOB:
                 Clob clob = rs.getClob(i);
-                out = clob.getSubString(1, (int) clob.length());
+                String out = clob.getSubString(1, (int) clob.length());
                 return out;
             case java.sql.Types.BLOB:
                 Blob blob = rs.getBlob(i);

@@ -61,12 +61,14 @@ public abstract class JCheckConfig {
 
     public static boolean checkConnections(Config config) {
         try {
-            System.out.printf("Testing connections and tables for: %s: %s%n", config.getConnection().getType(), config.getConnection().getJdbcUrl());
+            System.out.printf("Testing connections and tables for [%s] => %s%n", config.getConnection().getType(), config.getConnection().getJdbcUrl());
             DynamicConnect connection = new DynamicConnect(config);
             for (String table : config.getTables()) {
+                System.out.printf("Checking for table [%s] ", table);
                 String sqlCheck = "Select 1 FROM " + table;
                 ResultSet rs = connection.executeQuery(sqlCheck);
                 rs.close();
+                System.out.println();
             }
             connection.close();
         } catch (MalformedURLException | ClassNotFoundException | InstantiationException | IllegalAccessException | SQLException ex) {

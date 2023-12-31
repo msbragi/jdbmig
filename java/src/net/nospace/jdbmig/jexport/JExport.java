@@ -34,12 +34,17 @@ public class JExport {
             System.out.printf("Connecting to: %s: %s%n", config.getConnection().getType(), config.getConnection().getJdbcUrl());
             DynamicConnect connection = new DynamicConnect(config);
             for (String table : tables) {
+                
                 System.out.printf("Read table: %s%n", table);
                 ResultSet resultSet = connection.executeQuery("SELECT * FROM " + table);
                 TableTo result = resultSet2Table(resultSet, table, config.getFieldToLowerCase());
                 resultSet.close();
-                //String json = JsonUtil.getMapper().writeValueAsString(result);
-                String json = normalizeJson(result);
+                String json;
+                if(config.getPrettyPrint()) { // no need readable format for fields 
+                    json = JsonUtil.getMapper().writeValueAsString(result);
+                } else {
+                    json = normalizeJson(result);
+                }
                 String fileName = config.getDataDir() + table + ".json";
                 System.out.printf("Write table: %s to %s%n", table, fileName);
                 saveTable(fileName, json);

@@ -3,5 +3,5 @@ Ant-Version: Apache Ant 1.10.8
 Created-By: (c) Marco Sbragi (m.sbragi@nospace.net)
 X-COMMENT: Main-Class will be added automatically by build
 AppName: JDBMig
-Version: 1.0.0
+Version: 1.0.1
 
