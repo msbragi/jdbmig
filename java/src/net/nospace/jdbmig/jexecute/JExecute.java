@@ -20,13 +20,28 @@ import net.nospace.jdbmig.jutil.JStringUtils;
  */
 public class JExecute {
 
-    public static void bootstrap(Config config) {
-        if (config.getBootstrap() == null) {
+    public static void before(Config config) {
+        String script = config.getConnection().getBeforeExecute();
+        if (script == null || script.trim().equals("")) {
             return;
         }
-        System.out.printf("Execute bootstrap script: [%s]%n", config.getBootstrap());
+        System.out.printf("Execute [before] script: [%s]%n", script);
         try {
-            List<String> statements = getStatements(config.getBootstrap());
+            List<String> statements = getStatements(script);
+            execute(config, statements);
+        } catch (IOException ex) {
+            Logger.getLogger(JExecute.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public static void after(Config config) {
+        String script = config.getConnection().getAfterExecute();
+        if (script == null || script.trim().equals("")) {
+            return;
+        }
+        System.out.printf("Execute [after] script: [%s]%n", script);
+        try {
+            List<String> statements = getStatements(script);
             execute(config, statements);
         } catch (IOException ex) {
             Logger.getLogger(JExecute.class.getName()).log(Level.SEVERE, null, ex);

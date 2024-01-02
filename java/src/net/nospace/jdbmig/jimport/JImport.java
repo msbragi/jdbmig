@@ -15,7 +15,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import net.nospace.jdbmig.jexecute.JExecute;
 import net.nospace.jdbmig.jmodel.FieldTo;
+import net.nospace.jdbmig.jutil.JCheckConfig;
 
 /**
  *

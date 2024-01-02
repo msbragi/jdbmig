@@ -35,11 +35,12 @@ public class JDBMig {
             return;
         }
         if (IMPORT) {
-            JExecute.bootstrap(config);
+            JExecute.before(config);
             if (!JCheckConfig.checkImport(config)) {
                 return;
             }
             JImport.execute(config);
+            JExecute.after(config);
         } else {
             if (!JCheckConfig.checkExport(config)) {
                 return;

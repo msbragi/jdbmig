@@ -7,12 +7,16 @@ public class ConnectionTo {
 
     private String type;    // oracle/mysql/postgres/informix
     private List<String> initStrings; // Session init
+    private String beforeExecute; // Execute if defined before Start 
+    private String afterExecute;   // Execute after
     private String jdbcUrl; // jdbc:postgresql://host/db
     private String charset;
     private String user;
     private String password;
 
     public ConnectionTo() {
+        beforeExecute = null;
+        afterExecute = null;
         initStrings = new ArrayList<>();
     }
 
@@ -62,6 +66,22 @@ public class ConnectionTo {
 
     public void setCharset(String charset) {
         this.charset = charset;
+    }
+
+    public String getBeforeExecute() {
+        return beforeExecute;
+    }
+
+    public void setBeforeExecute(String beforeExecute) {
+        this.beforeExecute = beforeExecute;
+    }
+
+    public String getAfterExecute() {
+        return afterExecute;
+    }
+
+    public void setAfterExecute(String afterExecute) {
+        this.afterExecute = afterExecute;
     }
 
 }
