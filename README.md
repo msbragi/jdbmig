@@ -2,7 +2,7 @@
 Versions: 
 - 1.0.0 First release
 
-I have looked around to find an utility jdbc based, to download and upload data to different databases, but didn't found anything. For this reason i decided to build my own.
+I have looked around to find an utility jdbc based, to download and upload data to different databases, but didn't find anything. For this reason i decided to build my own.
 
 JDBMig is an agnostic java application that uses jdbc to export and import data into different databases. 
 
