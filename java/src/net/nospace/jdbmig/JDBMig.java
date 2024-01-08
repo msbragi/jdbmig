@@ -42,6 +42,7 @@ public class JDBMig {
             JImport.execute(config);
             JExecute.after(config);
         } else {
+            JExecute.before(config);
             if (!JCheckConfig.checkExport(config)) {
                 return;
             }
@@ -49,6 +50,7 @@ public class JDBMig {
                 JsonUtil.getMapper().configure(SerializationFeature.INDENT_OUTPUT, true);
             }
             JExport.execute(config);
+            JExecute.after(config);
         }
         //System.exit(0);
     }
