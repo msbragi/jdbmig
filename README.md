@@ -1,4 +1,4 @@
-# jdbmig - Small, Smart, Database Migration utiility 
+# jdbmig - Small, Smart, Database Migration Utility 
 
 ![Database Migration Illustration](docs/db-migration.png)
 
