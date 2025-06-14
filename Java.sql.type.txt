@@ -9,7 +9,7 @@ public class Types {
         public final static int REAL            =   7;
         public final static int DOUBLE          =   8;
         public final static int VARCHAR         =  12;
-	public final static int BOOLEAN         =  16;
+    	public final static int BOOLEAN         =  16;
         public final static int DATALINK        =  70;
         public final static int DATE            =  91;
         public final static int TIME            =  92;
